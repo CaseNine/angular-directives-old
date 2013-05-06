@@ -5,7 +5,7 @@ module.directive('price', function(){
 		replace: false,
 		scope: {
 			label: '@priceLabel',
-			value: '=value',
+			value: '=',
 		},
 		template: '<div class="control-group required">'
 						+'<label for="price" class="control-label">{{ label }}<sup>*</sup></label>'
