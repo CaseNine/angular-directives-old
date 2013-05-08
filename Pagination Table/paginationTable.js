@@ -120,7 +120,7 @@ module.directive('paginationTable', function($filter){
 		    };
 
 		    // functions have been describe process the data for display
-		    scope.search();
+		    //scope.search();
 
 		    // change sorting order
 		    scope.sort_by = function(newSortingOrder) {
@@ -139,6 +139,12 @@ module.directive('paginationTable', function($filter){
 		        else
 		            $('th.'+newSortingOrder+' i').removeClass().addClass('icon-chevron-down');
 		    };
+		    
+		    scope.$watch('items', function(){
+		    	if(scope.items){
+		    		scope.search();
+		    	}
+		    })
 		}, 
 	}
 })
