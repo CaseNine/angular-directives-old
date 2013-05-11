@@ -1,13 +1,17 @@
-pagination table directive:
+# Pagination Table directive
 
---: Usage :--
+## Usage
+```html
 <pagination-table items="items" show="show"></pagination-table>
+```
 
-@items en @show
+### @items en @show
 Attribute om met de parent controller te communiceren
 
---: @items example:--
+##  items example
 Json met Data:
+
+```javascript
 	$scope.items = [
 	    {"id":"1","name":"name 1","description":"description 1","field3":"field3 1","field4":"field4 1","field5 ":"field5 1"}, 
 	    {"id":"2","name":"name 2","description":"description 2","field3":"field3 2","field4":"field4 2","field5 ":"field5 2"}, 
@@ -30,8 +34,9 @@ Json met Data:
 	    {"id":"19","name":"name 19","description":"description 1","field3":"field3 19","field4":"field4 19","field5 ":"field5 19"}, 
 	    {"id":"20","name":"name 20","description":"description 1","field3":"field3 20","field4":"field4 20","field5 ":"field5 20"}
 	];
+```
 
---: @show :--
+## @show
 Json met de getoonde value in de table;
 
 Key: en Value zijn verplicht!;
@@ -39,14 +44,17 @@ Key: en Value zijn verplicht!;
 Key voor de naam boven de table denk aan vertaling;
 Value voor de attribute in de @items array
 
+```javascript
 	$scope.show = [
 	              {"key": "id", "value": "id"},
 	              {"key": "Omschrijving", "value": "description"}
 	 ];
+```
 
 
---: Output :--
+
+## Output
 Table with pagination en sorting on de page
 
-Reason:
+## Reason
 Easy way of doing!
