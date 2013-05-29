@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="showcase">
+<head>
+    <meta charset="UTF-8">
+    <title> Showcase CaseNine directives </title>
+
+    <link rel="stylesheet" href="components/components-bootstrap/css/bootstrap.css">
+
+    <script src="components/angular/angular.js"></script>
+    <script src="script.js"></script>
+
+
+
+    <script src="Price-Two-input/price.js"></script>
+</head>
+<body>
+
+
+<h1> Test the CaseNine AngularJS directives</h1>
+
+<form name="myPriceForm">
+
+    <price priceLabel="Amout of Euro's:" label="Amout of Euro's:" value="amoutOfEuros"></price>
+
+</form>
+
+<output> Price directive output: {{ amoutOfEuros }}</output>
+
+
+</body>
+</html>

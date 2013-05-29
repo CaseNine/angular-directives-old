@@ -1,0 +1,12 @@
+<div class="control-group required">
+
+    <label for="price" class="control-label">{{ label }}<sup>*</sup></label>
+
+    <div class="controls">
+        <div class="input-prepend input-append">
+            <span class="add-on"> € </span>
+            <input required="true" ng-model="euro" name="price" id="price" type="text" class="span1" ng-pattern="/[d]{.},[d]{2}/">
+        </div>
+        <span class="text-error"></span>
+    </div>
+</div>
