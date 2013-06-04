@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Bootstrap alert </title>
+
+    <link rel="stylesheet" href="components/sass-bootstrap/bootstrap-2.3.2.css">
+    <link rel="stylesheet" href="components/sass-bootstrap/bootstrap-responsive-2.3.2.css">
+
+
+    <script src="components/angular/angular.js"></script>
+
+    <script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+
+    <script src="app/scripts/app.js"></script>
+    <script src="app/scripts/directives/GlobalAlert.js"></script>
+    <script src="app/scripts/services/GlobalAlert.js"></script>
+    <script src="app/scripts/controllers/Alert.js"></script>
+
+</head>
+<body ng-app="alertApp">
+
+    <div class="container" ng-controller="AlertCtrl">
+
+        <global-alert-stack></global-alert-stack>
+        <global-alert-stack></global-alert-stack>
+
+    </div>
+
+</body>
+</html>

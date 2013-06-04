@@ -1,0 +1,14 @@
+{
+    "name": "Bootstrap-alert",
+    "version": "0.0.0",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "components"
+    ],
+    "dependencies": {
+        "sass-bootstrap": "~2.3.2",
+        "angular": "~1.0.7",
+        "angular-bootstrap": "~0.3.0"
+    }
+}
