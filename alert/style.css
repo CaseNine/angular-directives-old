@@ -1,0 +1,7 @@
+.alert {
+    -webkit-transition: all 4s ease-out 0s;
+    -moz-transition: all 4s ease-out 0s;
+    -ms-transition: all 4s ease-out 0s;
+    -o-transition: all 4s ease-out 0s;
+    transition: all 4s ease-out 0s;
+}

@@ -9,8 +9,8 @@ alertModule.run(function ($rootScope, $templateCache) {
     $rootScope.messages = [];
 
     $templateCache.put('casenine.bootstrap.ui.alert/alert.html',
-        '<div class="alert" ng-class="type && \'alert-\' + type">' +
-            '<button ng-show="manualCloseable" type="button" class="close" ng-click="onMessageClose(message, $index, $event)">&times;</button>' +
+        '<div class="alert" ng-class="message.type && \'alert-\' + message.type">' +
+            '<button ng-show="manualCloseable" type="button" class="close" ng-click="onMessageClose(message, $event)">&times;</button>' +
             '<strong> {{ message.title}} </strong> {{ message.text }} ' +
         '</div>'
     );
@@ -22,7 +22,7 @@ alertModule.directive('globalAlertStack', function globalAlertStackDirective() {
             '<div>' +
                 '<ul>' +
                     '<li ng-repeat="message in messages">' +
-                        '<alert-item message="message"></alert-item>' +
+                        '<alert-item message="message" index="$index"></alert-item>' +
                     '</li>' +
                 '</ul>' +
             '</div>',
@@ -45,10 +45,10 @@ alertModule.directive('alertItem', function alertItemDirective() {
             close: '@'
         },
         controller: function globalAlertStackCtrl($scope, GlobalAlert, $timeout) {
-
-            $scope.onMessageClose = function onMessageClose(message, $index, $event) {
-                console.info('onMessageClose()', message, $index, $event);
-                GlobalAlert.remove($index);
+            $scope.onMessageClose = function onMessageClose(message, $event) {
+                var index = $scope.$parent.$index;
+                console.info('onMessageClose()', message, $event, index);
+                GlobalAlert.remove(index);
             };
 
             $scope.manualCloseable = false;
