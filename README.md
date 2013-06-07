@@ -9,3 +9,8 @@ See http://cloud-link.nl:2222/hlemkes/angularjs-directives/wikis/Links as well.
 Avgrund Modal directive
 ==========
 https://github.com/thvd/Avgrund-angular
+
+
+Links
+======
+https://github.com/jmcunningham/AngularJS-Learning
